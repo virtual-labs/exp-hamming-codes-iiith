@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/virtual-labs/virtual-style@0.0.8-b/css/style.min.css">
+	<link rel="stylesheet" href="./css/main.css">
+	<title>
+		Error Correction
+	</title>
+</head>
+
+<body onload="getNumber()">
+
+	<div class="container">
+		<div class="columns is-centered">
+			<div class="column is-one-quarter v-instruction-title">
+				Tasks
+			</div>
+			<div class="column">
+				<div class="v-tabs">
+					<ul>
+						<li id="Task1" onclick="window.location.href = 'index.html';">
+							<a>
+								Encoding
+							</a>
+						</li>
+
+						<li class="is-active" id="Task2">
+							<a>
+								Error Correction
+							</a>
+						</li>
+
+
+
+
+					</ul>
+				</div>
+			</div>
+		</div>
+
+		<!-- <h1 style="text-align: center;">Encoding</h1> -->
+
+		<div class="columns is-centered">
+			<div class="column">
+				<div class="v-collapsible-instruction-container v-instruction-container">
+					<div class="v-collapsible is-size-5">Instructions</div>
+					<div class="v-content" style="text-align: left; padding-left: 10%; padding-right: 10%;">
+						<ul style="list-style: disc;">
+							<b>Quick theory overview:</b>
+
+							<li>
+								Hamming codes can correct any single bit error. For (7, 4) Hamming code, the procedure
+								for single bit
+								error correction is provided in detail in <b>Theory</b> section. Read it carefully
+								before attempting this question.
+							</li>
+						</ul>
+						<br>
+						<ul style="list-style: disc;">
+
+							<b>Procedure: </b>
+							<li>
+								Clicking on a bit toggles the value in it.
+							</li>
+
+							<li>
+								The figure shows a vector obtained by flipping any single bit of a codeword.
+							</li>
+
+							<li>
+								Identify the error location by following the procedure given in theory. Then, flip the bit
+								corresponding to the error location and click on <Submit>.
+							</li>
+
+							<li>
+								<b>Observations</b> displays whether you have corrected the error or not.
+							</li>
+
+							<li>
+								<b>Reset - </b> Resets back all the bits to the original codeword.
+							</li>
+
+							<li>
+								<b>Refresh - </b> Generates a new vector.
+							</li>
+
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<br>
+
+	<div class="columns is-centered">
+		<div class="column is-11-desktop is-12-tablet is-12-mobile">
+			<div class="v-datalist-container components-list">
+				<p> A codeword of the (7, 4) Hamming code is passed through a noisy channel which has resulted in a
+					<b>single bit flip</b>.
+					Find the original codeword by flipping back the bit.
+				</p>
+			</div>
+		</div>
+	</div>
+
+	<div class="columns is-centered is-flex-direction-row is-flex-wrap-wrap is-align-content-start"
+		style="margin-top:-1.5%">
+		<div class="column is-8-desktop is-12-tablet is-12-mobile">
+			<div class="box-question">
+
+
+
+
+				<svg width="330" height="330">
+
+					<circle cx="110" cy="110" r="110" style="fill:darkred" opacity="0.5" />
+					<circle cx="220" cy="110" r="110" style="fill:green" opacity="0.5" />
+					<circle cx="165" cy="220" r="110" style="fill:rgba(0, 0, 255, 0.5)" />
+
+
+					<foreignObject class="node" x="140" y="60" width="50" height="50">
+						<div> <button id="c1" onclick="toggle(id)">1</button> </div>
+					</foreignObject>
+
+					<foreignObject class="node" x="75" y="160" width="50" height="50">
+						<div> <button id="c2" onclick="toggle(id)">1</button> </div>
+					</foreignObject>
+
+					<foreignObject class="node" x="205" y="160" width="50" height="50">
+						<div> <button id="c3" onclick="toggle(id)">1</button> </div>
+					</foreignObject>
+
+					<foreignObject class="node" x="140" y="140" width="50" height="50">
+						<div> <button id="c4" onclick="toggle(id)">1</button> </div>
+					</foreignObject>
+
+					<foreignObject class="node" x="50" y="45" width="50" height="50">
+						<div> <button id="c5" onclick="toggle(id)">1</button> </div>
+					</foreignObject>
+
+					<foreignObject class="node" x="230" y="45" width="50" height="50">
+						<div> <button id="c6" onclick="toggle(id)">1</button> </div>
+					</foreignObject>
+
+					<foreignObject class="node" x="140" y="240" width="50" height="50">
+						<div> <button id="c7" onclick="toggle(id)">1</button> </div>
+					</foreignObject>
+
+				</svg>
+
+				<br>
+
+				<button class="v-button" role="button" onclick="verify()" form="form"> Submit
+				</button>
+				<button class="v-button" role="button" onclick="reset()"> Reset </button>
+				<button class="v-button" role="button" onclick="ref()"> Refresh </button>
+
+
+			</div>
+		</div>
+
+
+		<div class="column is-3-desktop is-4-tablet is-12-mobile">
+			<div class="v-datalist-container components-list">
+				<div class="v-datalist-title">Observations</div>
+				<div id="observations">
+					<span id="question"> </span>
+					<br>
+					<br>
+					<span id="comment"> </span>
+					<br>
+					<br>
+					<span id="answer"> </span>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+	<script src="https://cdn.jsdelivr.net/gh/virtual-labs/virtual-style@0.0.8-b/js/script.js"></script>
+	<script src="./js/error-correction.js"></script>
+</body>
+
+
+</html>
