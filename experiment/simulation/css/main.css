@@ -67,18 +67,6 @@ h1 {
     font-weight: 500;
 }
 
-
-/* for dropping instruction box  */
-
-.instructions-box {
-    overflow: hidden;
-    transition: all .5s ease;
-}
-
-.instructions-box.expand {
-    max-height: 35em;
-}
-
 .v-instruction-container {
     border: .2rem solid #97d23d;
     justify-content: flex-start;
@@ -136,4 +124,17 @@ input[type=number]::-webkit-outer-spin-button {
     background-color: white;
     border-color: black;
     border-radius: 10px;
+}
+
+
+@media screen and (min-width: 800px) {
+    .myImage {
+        padding-left: 10em;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .myImage {
+        padding-left: 1em;
+    }
 }

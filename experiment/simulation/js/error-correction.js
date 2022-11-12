@@ -14,7 +14,6 @@ function getNumber() {
 
     rand[error] = (rand[error] + 1) % 2;
 
-    console.log(error);
 
     document.getElementById("c1").innerHTML = rand[0];
     document.getElementById("c2").innerHTML = rand[1];
