@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/virtual-labs/virtual-style@0.0.8-b/css/style.min.css">
+	<link rel="stylesheet" href="./css/main.css">
+	<script type="text/javascript" id="MathJax-script" async
+		src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+	<title>
+		Encoding
+	</title>
+</head>
+
+<body onload="getNumber()">
+
+	<div class="container">
+		<div class="columns is-centered">
+			<div class="column is-one-quarter v-instruction-title">
+				Tasks
+			</div>
+			<div class="column">
+				<div class="v-tabs">
+					<ul>
+						<li class="is-active" id="Task1">
+							<a>
+								Encoding
+							</a>
+						</li>
+
+						<li id="Task2" onclick="window.location.href = 'error-correction.html';">
+							<a>
+								Error Correction
+							</a>
+						</li>
+
+
+
+
+					</ul>
+				</div>
+			</div>
+		</div>
+
+		<!-- <h1 style="text-align: center;">Encoding</h1> -->
+
+		<div class="columns is-centered">
+			<div class="column">
+				<div class="v-collapsible-instruction-container v-instruction-container">
+					<div class="v-collapsible is-size-5">Instructions</div>
+					<div class="v-content" style="text-align: left; padding-left: 10%; padding-right: 10%;">
+						<ul style="list-style: disc;">
+							<b>Quick theory overview:</b>
+							<li>
+								The encoding process for the (7,4) Hamming code is illustrated in figure below. Here,
+								\(m_1, m_2, m_3,\) and \(m_4\) are the message bits and \(p_5, p_6, \) and \(p_7\) are the
+								parity bits. The codeword corresponding to the message \(\begin{bmatrix} m_1 & m_2 & m_3
+								& m_4\end{bmatrix}\)
+								will be \(\begin{bmatrix} m_1 & m_2 & m_3 & m_4 & p_5 & p_6 & p_7\end{bmatrix}\).
+							</li>
+						</ul>
+						<img src="./images/Hamming.png" width="500" class="myImage">
+						<ul style="list-style: disc;">
+
+							<b>Procedure:</b>
+
+							<li>
+								Enter all the three parity bits and click on <b>Submit</b>.
+							</li>
+
+							<li>
+								The correctness of the answer is displayed in <b>Observations</b>.
+							</li>
+
+							<li>
+								<b>Reset - </b> Clears all the entered parity bits.
+							</li>
+
+							<li>
+								<b>Next - </b> Displays the next example. Solve sufficient number of examples
+							</li>
+
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<br>
+
+	<div class="columns is-centered">
+		<div class="column is-11-desktop is-12-tablet is-12-mobile">
+			<div class="v-datalist-container components-list">
+				<p> Consider a <b>(7, 4)</b> Hamming code. Encode the message shown in the figure by entering the
+					three parity bits.
+
+				</p>
+			</div>
+		</div>
+	</div>
+
+	<div class="columns is-centered is-flex-direction-row is-flex-wrap-wrap is-align-content-start"
+		style="margin-top:-1.5%">
+		<div class="column is-8-desktop is-12-tablet is-12-mobile">
+			<div class="box-question">
+
+
+
+				<form action="" method="get" id="form" onsubmit="return false">
+
+					<svg width="330" height="330">
+
+						<circle cx="110" cy="110" r="110" style="fill:darkred" opacity="0.5" />
+						<circle cx="220" cy="110" r="110" style="fill:green" opacity="0.5" />
+						<circle cx="165" cy="220" r="110" style="fill:rgba(0, 0, 255, 0.5)" />
+
+						<foreignObject class="node" x="0" y="55" width="330" height="330">
+							<div id="m1" style="color: black;"> 1 </div>
+						</foreignObject>
+
+						<foreignObject class="node" x="-65" y="150" width="330" height="330">
+							<div id="m2" style="color: black;"> 2 </div>
+						</foreignObject>
+
+						<foreignObject class="node" x="65" y="150" width="330" height="330">
+							<div id="m3" style="color: black;"> 3 </div>
+						</foreignObject>
+
+						<foreignObject class="node" x="0" y="130" width="330" height="330">
+							<div id="m4" style="color: black;"> 4 </div>
+						</foreignObject>
+
+						<foreignObject class="node" x="-90" y="50" width="330" height="330">
+							<div class="a-int">
+								<label for="p5"> </label>
+								<input type="number" class="bit" id="p5" min="0" max="1">
+							</div>
+
+						</foreignObject>
+
+						<foreignObject class="node" x="90" y="50" width="330" height="330">
+							<div class="b-int">
+								<label for="p6"> </label>
+								<input type="number" class="bit" id="p6" min="0" max="1">
+							</div>
+						</foreignObject>
+
+						<foreignObject class="node" x="0" y="240" width="330" height="330">
+							<div class="c-int">
+								<label for="p7"> </label>
+								<input type="number" class="bit" id="p7" min="0" max="1">
+							</div>
+						</foreignObject>
+
+					</svg>
+
+					<br>
+
+					<button class="v-button" role="button" onclick="verify()" form="form"> Submit
+					</button>
+					<button class="v-button" role="button" onclick="reset()" form="form"> Reset </button>
+					<button class="v-button" role="button" onclick="ref()"> Next </button>
+				</form>
+
+
+			</div>
+		</div>
+
+
+		<div class="column is-3-desktop is-4-tablet is-12-mobile">
+			<div class="v-datalist-container components-list">
+				<div class="v-datalist-title">Observations</div>
+				<div id="observations">
+
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+	<script src="https://cdn.jsdelivr.net/gh/virtual-labs/virtual-style@0.0.8-b/js/script.js"></script>
+	<script src="./js/encoding.js"></script>
+<script src="../assets/js/iframeResize.js"></script></body>
+
+
+</html>

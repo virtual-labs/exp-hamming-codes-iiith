@@ -1,0 +1,25 @@
+{
+    "version": 2.0,
+    "questions": [
+      {
+        "question": "Including a parity bit along with the data surely detects the errors.",
+        "answers": {
+          "a": "True",
+          "b": "False"
+        },
+        "correctAnswer": "b",
+        "difficulty": "beginner"
+      },
+      {
+        "question": "What is the hamming distance between the codes '11001011' and '10000111'",
+        "answers": {
+          "a": "2",
+          "b": "3",
+          "c": "4",
+          "d": "5"
+        },
+        "correctAnswer": "b",
+        "difficulty": "beginner"
+      }
+    ]
+  }
