@@ -9,7 +9,7 @@ There are two tasks in this experiment.
 *   Enter all the three parity bits in the fields provided and click on **Submit**.
 *   The correctness of the answer is displayed in **Observations**.
 *   **Reset -** Clears all the entered parity bits.
-*   **Refresh -** Generates new message which needs to be encoded.
+*   **Next -** Displays the next example.
 ---
 **Procedure for Error-Correction:**
 *   The objective of this task is to correct a single error in a (7, 4) Hamming code.
@@ -18,5 +18,5 @@ There are two tasks in this experiment.
 *   Identify the error location by following the procedure given in theory. Then, flip the bit corresponding to the error location and click on .
 *   **Observations** displays whether you have corrected the error or not.
 *   **Reset -** Resets back all the bits to the original codeword.
-*   **Refresh -** Generates a new vector.
+*   **Next -** Displays the next example.
 ---
