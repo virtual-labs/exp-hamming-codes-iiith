@@ -1,39 +1,47 @@
 {
-  "version": 2.0,
-  "questions": [
-    {
-      "question": "This is a Sample Question 1?",
-      "answers": {
-        "a": "answer1",
-        "b": "answer2",
-        "c": "answer3",
-        "d": "answer4"
+    "version": 2.0,
+    "questions": [
+      {
+        "question": "What is the minimal Hamming distance between any two correct codewords?",
+        "answers": {
+          "a": "1",
+          "b": "2",
+          "c": "3",
+          "d": "4"
+        },
+        "correctAnswer": "c",
+        "difficulty": "beginner"
       },
-      "explanations": {
-        "a": "Explanation 1  <a href='www.google.com'>here</a>",
-        "b": "Explanation 2",
-        "c": "Explanation 2",
-        "d": "Explanation 2"
+      {
+        "question": "Hamming codes can be used for both single-bit error and burst error detection and correction.",
+        "answers": {
+          "a": "True",
+          "b": "False"
+        },
+        "correctAnswer": "b",
+        "difficulty": "beginner"
       },
-      "correctAnswer": "a",
-      "difficulty": "beginner"
-    },
-    {
-      "question": "This is a Sample Question 2?",
-      "answers": {
-        "a": "answer1",
-        "b": "answer2",
-        "c": "answer3",
-        "d": "answer4"
+      {
+        "question": "Hamming code is",
+        "answers": {
+          "a": "An error detection code system",
+          "b": "An error correction code system",
+          "c": "A programme conversion code system",
+          "d": "None of the above"
+        },
+        "correctAnswer": "b",
+        "difficulty": "beginner"
       },
-      "explanations": {
-        "a": "Explanation 1  <a href='www.google.com'>here</a>",
-        "b": "Explanation 2",
-        "c": "Explanation 2",
-        "d": "Explanation 2"
-      },
-      "correctAnswer": "c",
-      "difficulty": "beginner"
-    }
-  ]
-}
+      {
+        "question": "A seven-bit Hamming code is received as 1111101. What is the correct code?",
+        "answers": {
+          "a": "1101111",
+          "b": "1011111",
+          "c": "1111111",
+          "d": "1111011"
+        },
+        "correctAnswer": "c",
+        "difficulty": "beginner"
+      }
+    ]
+  }
