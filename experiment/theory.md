@@ -18,7 +18,7 @@ We will now describe the encoding of Hamming code through a diagram of 3 circles
 ![alt text](./images/fig_hamming.png)
 
 
-<br  />
+
 Hamming code is a code over binary field $\mathbb{F}_2$ of length 7, dimension 4 and minimum distance 3. The encoding procedure of the Hamming code is given by the following equations:
 
 Please note that in the above equations, the addition is modulo-2 addition over the binary field. Based on the above equations, the generator matrix of the Hamming code is given by
