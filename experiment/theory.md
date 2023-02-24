@@ -14,17 +14,13 @@ The theory associated with Experiment-3 is divided into two parts:
 ## 1 Encoding
 
 We will now describe the encoding of Hamming code through a diagram of 3 circles as shown in Figure
+<br />
 ![alt text](./images/fig_hamming.png)
 
 
+<br  />
+Hamming code is a code over binary field $$\mathbb{F}_2$$ of length 7, dimension 4 and minimum distance 3. The encoding procedure of the Hamming code is given by the following equations:
 
-Hamming code is a code over binary field $\mathbb{F}_2$ of length 7, dimension 4 and minimum distance 3. The encoding procedure of the Hamming code is given by the following equations:
-
-$$\begin{align*}
-p_5 & = & m_1 + m_2 + m_4 \mod 2, \\
-p_6 & = & m_1 + m_3 + m_4 \mod 2, \\
-p_7 & = & m_2 + m_3 + m_4 \mod 2.
-\end{align*}$$
 Please note that in the above equations, the addition is modulo-2 addition over the binary field. Based on the above equations, the generator matrix of the Hamming code is given by
 
 $$\begin{align*}
