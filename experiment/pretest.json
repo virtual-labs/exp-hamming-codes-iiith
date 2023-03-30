@@ -2,24 +2,60 @@
     "version": 2.0,
     "questions": [
       {
-        "question": "Including a parity bit along with the data surely detects the errors.",
+        "question": "<img src='./images/exp3@pre1.png'></img>",
         "answers": {
-          "a": "True",
-          "b": "False"
+          "a": "4",
+          "b": "5",
+          "c": "3",
+          "d": "7"
+        },
+        "correctAnswer": "c",
+        "difficulty": "beginner"
+      },
+      {
+        "question": "<img src='./images/exp3@pre2.png'></img>",
+        "answers": {
+          "a": "d",
+          "b": "d-1",
+          "c": "d/2",
+          "d": "(d-1)/2"
         },
         "correctAnswer": "b",
         "difficulty": "beginner"
       },
       {
-        "question": "What is the hamming distance between the codes '11001011' and '10000111'",
+        "question": "<img src='./images/exp3@pre3.png'></img>",
+        "answers": {
+          "a": "<img src='./images/exp3@pre3a.png'></img>",
+          "b": "<img src='./images/exp3@pre3b.png'></img>",
+          "c": "<img src='./images/exp3@pre3c.png'></img>",
+          "d": "<img src='./images/exp3@pre3c.png'></img>"
+        },
+        "correctAnswer": "c",
+        "difficulty": "beginner"
+      },
+      {
+        "question": "<img src='./images/exp3@pre4.png'></img>",
+        "answers": {
+          "a": "w min = d min",
+          "b": "w min > d min",
+          "c": "w min < d min",
+          "d": "Varies based on code"
+        },
+        "correctAnswer": "a",
+        "difficulty": "beginner"
+      },
+      {
+        "question": "<img src='./images/exp3@pre5.png'></img>",
         "answers": {
           "a": "2",
           "b": "3",
-          "c": "4",
-          "d": "5"
+          "c": "6",
+          "d": "7"
         },
-        "correctAnswer": "b",
+        "correctAnswer": "a",
         "difficulty": "beginner"
       }
+      
     ]
   }
