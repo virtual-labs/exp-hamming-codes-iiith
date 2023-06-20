@@ -23,8 +23,8 @@ Hamming code is a code over binary field $\mathbb{F}_2$ of length 7, dimension 4
 
 Please note that in the above equations, the addition is modulo-2 addition over the binary field. Based on the above equations, the generator matrix of the Hamming code is given by
 
-$G$ = $\begin{align*} 
-\begin{bmatrix} 1 & 0 & 0 & 0 & 1 & 1 & 0 \\
+$G$ = $$\begin{align*} 
+       \begin{bmatrix} 1 & 0 & 0 & 0 & 1 & 1 & 0 \\
                        0 & 1 & 0 & 0 & 1 & 0 & 1 \\
                        0 & 0 & 1 & 0 & 0 & 1 & 1 \\
                        0 & 0 & 0 & 1 & 1 & 1 & 1 \\
