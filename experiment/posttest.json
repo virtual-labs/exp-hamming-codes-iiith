@@ -58,7 +58,7 @@
       }
       ,
       {
-        "question": "6. Consider an extended Hamming code of length $\\mathbf{8}$ and dimension $\\mathbf{4}$ obtained by adding a partiy bit to the codeword of the Hamming code based on the following equation: $$\\begin{equation*} p_8 = \\sum_{i=1}^4 m_i + \\sum_{i=5}^7 p_i \\end{equation*} $$ Thus, the codeword of the extended Hamming code is given by \\\\ $\\mathbf{[m_1, m_2, m_3, m_4, p_5, p_6, p_7, p_8]}$. What is the minimum distance of the extended Hamming code?",
+        "question": "6. Consider an extended Hamming code of length $\\mathbf{8}$ and dimension $\\mathbf{4}$ obtained by adding a partiy bit to the codeword of the Hamming code based on the following equation: $$\\begin{equation*} p_8 = \\sum_{i=1}^4 m_i + \\sum_{i=5}^7 p_i \\end{equation*} $$ Thus, the codeword of the extended Hamming code is given by $\\mathbf{[m_1, m_2, m_3, m_4, p_5, p_6, p_7, p_8]}$. What is the minimum distance of the extended Hamming code?",
         "answers": {
           "a": "3",
           "b": "5",
