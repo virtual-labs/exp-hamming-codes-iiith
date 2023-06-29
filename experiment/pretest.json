@@ -2,7 +2,7 @@
     "version": 2.0,
     "questions": [
       {
-        "question": "<img src='./images/exp3@pre1.png'></img>",
+        "question": "1. What is the rank of the parity check matrix of a $\\mathbf{(8,5)}$ linear code?",
         "answers": {
           "a": "4",
           "b": "5",
@@ -13,40 +13,40 @@
         "difficulty": "beginner"
       },
       {
-        "question": "<img src='./images/exp3@pre2.png'></img>",
+        "question": "2. For an $\\mathbf{(n,k)}$ code with minimum distance $\\mathbf{d}$, what is the maximum number of errors which can be detected?",
         "answers": {
-          "a": "d",
-          "b": "d-1",
-          "c": "d/2",
-          "d": "(d-1)/2"
+          "a": "$d$",
+          "b": "$d-1$",
+          "c": "$\frac{d}{2}$",
+          "d": "$\frac{d-1}{2}$"
         },
         "correctAnswer": "b",
         "difficulty": "beginner"
       },
       {
-        "question": "<img src='./images/exp3@pre3.png'></img>",
+        "question": "3. Consider the generator matrix of an $\\mathbf{(n,k)}$ code over $\\mathbb{F}_2$ in systematic form given by $\\begin{bmatrix} \\underbrace{I}_{k \\times k} | \\underbrace{P}_{k \\times (n-k)} \\end{bmatrix}$, then what is the partiy check matrix of this code?",
         "answers": {
-          "a": "<img src='./images/exp3@pre3a.png'></img>",
-          "b": "<img src='./images/exp3@pre3b.png'></img>",
-          "c": "<img src='./images/exp3@pre3c.png'></img>",
-          "d": "<img src='./images/exp3@pre3c.png'></img>"
+          "a": "$\\begin{bmatrix} \\underbrace{I}_{k \\times k} | \\underbrace{P}_{k \\times (n-k)} \\end{bmatrix}$",
+          "b": "$\\begin{bmatrix} \\underbrace{P}_{k \\times (n-k)} | \\underbrace{I}_{k \\times k} \\end{bmatrix}$",
+          "c": "$\\begin{bmatrix} \\underbrace{P^t}_{(n-k) \\times k} | \\underbrace{I}_{(n-k) \\times (n-k)} \\end{bmatrix}$",
+          "d": "$\\begin{bmatrix} \\underbrace{I}_{(n-k) \\times (n-k)} | \\underbrace{P^t}_{(n-k) \\times k} \\end{bmatrix}$"
         },
         "correctAnswer": "c",
         "difficulty": "beginner"
       },
       {
-        "question": "<img src='./images/exp3@pre4.png'></img>",
+        "question": "4. Let $\\mathbf{w_{\\min}}$ denote the minimum Hamming weight of a non-zero codeword in a linear block code $\\mathcal{C}$ and let $\\mathbf{d_{\\min}}$ denote the minimum distance of the code. Which of the following is true?",
         "answers": {
-          "a": "w min = d min",
-          "b": "w min > d min",
-          "c": "w min < d min",
+          "a": "$w_{\\min} = d_{\\min}$",
+          "b": "$w_{\\min} > d_{\\min}$",
+          "c": "$w_{\\min} < d_{\\min}$",
           "d": "Varies based on code"
         },
         "correctAnswer": "a",
         "difficulty": "beginner"
       },
       {
-        "question": "<img src='./images/exp3@pre5.png'></img>",
+        "question": "5. What is the minimum distance of a single parity check code with block length 7 and dimension 6?",
         "answers": {
           "a": "2",
           "b": "3",
