@@ -17,8 +17,8 @@
         "answers": {
           "a": "$d$",
           "b": "$d-1$",
-          "c": "$\frac{d}{2}$",
-          "d": "$\frac{d-1}{2}$"
+          "c": "$\\frac{d}{2}$",
+          "d": "$\\frac{d-1}{2}$"
         },
         "correctAnswer": "b",
         "difficulty": "beginner"
