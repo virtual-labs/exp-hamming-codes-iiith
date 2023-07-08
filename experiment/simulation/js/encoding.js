@@ -55,7 +55,7 @@ function verify() {
         return;
     }
 
-    else if (p5 > 1 || p5 < 0 || p5 > 1 || p6 < 0 || p7 > 1 || p7 < 0) {
+    else if (p5 > 1 || p5 < 0 || p6 > 1 || p6 < 0 || p7 > 1 || p7 < 0) {
         obs.style.color = "black";
         obs.innerHTML="Choose values from the set {0, 1}";
         return;
