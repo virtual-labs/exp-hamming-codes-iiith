@@ -1,0 +1,61 @@
+{
+    "version": 2.0,
+    "questions": [
+      {
+        "question": "1. What is the rank of the parity check matrix of a $\\mathbf{(8,5)}$ linear code?",
+        "answers": {
+          "a": "4",
+          "b": "5",
+          "c": "3",
+          "d": "7"
+        },
+        "correctAnswer": "c",
+        "difficulty": "beginner"
+      },
+      {
+        "question": "2. For an $\\mathbf{(n,k)}$ code with minimum distance $\\mathbf{d}$, what is the maximum number of errors which can be detected?",
+        "answers": {
+          "a": "$d$",
+          "b": "$d-1$",
+          "c": "$\\frac{d}{2}$",
+          "d": "$\\frac{d-1}{2}$"
+        },
+        "correctAnswer": "b",
+        "difficulty": "beginner"
+      },
+      {
+        "question": "3. Consider the generator matrix of an $\\mathbf{(n,k)}$ code over $\\mathbb{F}_2$ in systematic form given by $\\begin{bmatrix} \\underbrace{I}_{k \\times k} | \\underbrace{P}_{k \\times (n-k)} \\end{bmatrix}$, then what is the partiy check matrix of this code?",
+        "answers": {
+          "a": "$\\begin{bmatrix} \\underbrace{I}_{k \\times k} | \\underbrace{P}_{k \\times (n-k)} \\end{bmatrix}$",
+          "b": "$\\begin{bmatrix} \\underbrace{P}_{k \\times (n-k)} | \\underbrace{I}_{k \\times k} \\end{bmatrix}$",
+          "c": "$\\begin{bmatrix} \\underbrace{P^t}_{(n-k) \\times k} | \\underbrace{I}_{(n-k) \\times (n-k)} \\end{bmatrix}$",
+          "d": "$\\begin{bmatrix} \\underbrace{I}_{(n-k) \\times (n-k)} | \\underbrace{P^t}_{(n-k) \\times k} \\end{bmatrix}$"
+        },
+        "correctAnswer": "c",
+        "difficulty": "beginner"
+      },
+      {
+        "question": "4. Let $\\mathbf{w_{\\min}}$ denote the minimum Hamming weight of a non-zero codeword in a linear block code $\\mathcal{C}$ and let $\\mathbf{d_{\\min}}$ denote the minimum distance of the code. Which of the following is true?",
+        "answers": {
+          "a": "$w_{\\min} = d_{\\min}$",
+          "b": "$w_{\\min} > d_{\\min}$",
+          "c": "$w_{\\min} < d_{\\min}$",
+          "d": "Varies based on code"
+        },
+        "correctAnswer": "a",
+        "difficulty": "beginner"
+      },
+      {
+        "question": "5. What is the minimum distance of a single parity check code with block length 7 and dimension 6?",
+        "answers": {
+          "a": "2",
+          "b": "3",
+          "c": "6",
+          "d": "7"
+        },
+        "correctAnswer": "a",
+        "difficulty": "beginner"
+      }
+      
+    ]
+  }

@@ -1,0 +1,72 @@
+{
+    "version": 2.0,
+    "questions": [
+      {
+        "question": "1. The number of codewords in a $\\mathbf{(7,4,3)}$ Hamming code is",
+        "answers": {
+          "a": "4",
+          "b": "8",
+          "c": "16",
+          "d": "32"
+        },
+        "correctAnswer": "c",
+        "difficulty": "beginner"
+      },
+      {
+        "question": "2. Which of the following is a codeword of the Hamming code?",
+        "answers": {
+          "a": "$\\begin{bmatrix} 1 & 0 & 1 & 1 & 0 & 1 & 1 \\end{bmatrix}$",
+          "b": "$\\begin{bmatrix} 0 & 0 & 1 & 1 & 1 & 0 & 1  \\end{bmatrix}$",
+          "c": "$\\begin{bmatrix} 1 & 0 & 0 & 1 & 0 & 0 & 1 \\end{bmatrix}$",
+          "d": "$\\begin{bmatrix} 0 & 1 & 0 & 1 & 1 & 1 & 0 \\end{bmatrix}$"
+        },
+        "correctAnswer": "c",
+        "difficulty": "beginner"
+      },
+      {
+        "question": "3. What is the number of vectors which are at a Hamming distance $\\mathbf{1}$ from a given codeword in the Hamming code?",
+        "answers": {
+          "a": "4",
+          "b": "5",
+          "c": "7",
+          "d": "9"
+        },
+        "correctAnswer": "c",
+        "difficulty": "beginner"
+      },
+      {
+        "question": "4. If Hamming code is used as an error-detecting code, how many errors can a Hamming code detect?",
+        "answers": {
+          "a": "1",
+          "b": "2",
+          "c": "3",
+          "d": "4"
+        },
+        "correctAnswer": "b",
+        "difficulty": "beginner"
+      },
+      {
+        "question": "5. What is the minimum distance of the dual of $\\mathbf{(7,4,3)}$ Hamming code?",
+        "answers": {
+          "a": "4",
+          "b": "3",
+          "c": "5",
+          "d": "6"
+        },
+        "correctAnswer": "a",
+        "difficulty": "beginner"
+      }
+      ,
+      {
+        "question": "6. Consider an extended Hamming code of length $\\mathbf{8}$ and dimension $\\mathbf{4}$ obtained by adding a partiy bit to the codeword of the Hamming code based on the following equation: $$\\begin{equation*} p_8 = \\sum_{i=1}^4 m_i + \\sum_{i=5}^7 p_i \\end{equation*} $$ Thus, the codeword of the extended Hamming code is given by $\\mathbf{[m_1, m_2, m_3, m_4, p_5, p_6, p_7, p_8]}$. What is the minimum distance of the extended Hamming code?",
+        "answers": {
+          "a": "3",
+          "b": "5",
+          "c": "4",
+          "d": "6"
+        },
+        "correctAnswer": "c",
+        "difficulty": "beginner"
+      }
+    ]
+  }
