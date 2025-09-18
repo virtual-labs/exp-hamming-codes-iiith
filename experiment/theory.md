@@ -2,8 +2,8 @@ In Experiment-2, we provided a brief introduction to linear block codes, their g
 
 The theory associated with Experiment-3 is divided into two parts:
 
-(1) Encoding <br>
-(2) Error Correction
+1. Encoding
+2. Error Correction
 
 ### 1. Encoding
 
