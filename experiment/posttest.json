@@ -102,6 +102,159 @@
       },
       "correctAnswer": "c",
       "difficulty": "beginner"
+    },
+    {
+      "question": "7. Given the received vector $\\mathbf{y} = [1, 1, 0, 1, 0, 1, 0]$ for the $(7,4)$ Hamming code, calculate the syndrome values $[s_1, s_2, s_3]$.",
+      "answers": {
+        "a": "$[0, 0, 0]$",
+        "b": "$[1, 0, 0]$",
+        "c": "$[0, 1, 1]$",
+        "d": "$[1, 1, 0]$"
+      },
+      "explanations": {
+        "a": "Incorrect. Calculate $s_1 = y_1 + y_2 + y_4 + y_5$, $s_2 = y_1 + y_3 + y_4 + y_6$, $s_3 = y_2 + y_3 + y_4 + y_7$.",
+        "b": "Incorrect. Check the syndrome calculations.",
+        "c": "Incorrect. Check the syndrome calculations.",
+        "d": "Correct! $s_1 = 1+1+1+0 = 1$, $s_2 = 1+0+1+1 = 1$, $s_3 = 1+0+1+0 = 0$."
+      },
+      "correctAnswer": "d",
+      "difficulty": "intermediate"
+    },
+    {
+      "question": "8. For a $(15, 11)$ Hamming code, how many parity bits are required?",
+      "answers": {
+        "a": "3",
+        "b": "4",
+        "c": "5",
+        "d": "11"
+      },
+      "explanations": {
+        "a": "Incorrect. The number of parity bits is $n-k = 15-11$.",
+        "b": "Correct! For a $(15,11)$ code, there are $15-11 = 4$ parity bits.",
+        "c": "Incorrect. Calculate $n-k$ correctly.",
+        "d": "Incorrect. 11 is the number of message bits."
+      },
+      "correctAnswer": "b",
+      "difficulty": "intermediate"
+    },
+    {
+      "question": "9. If the syndrome for a received vector in the $(7,4)$ Hamming code is $[0, 1, 1]$, which bit has an error?",
+      "answers": {
+        "a": "$m_1$",
+        "b": "$m_2$",
+        "c": "$m_3$",
+        "d": "$m_4$"
+      },
+      "explanations": {
+        "a": "Incorrect. Error in $m_1$ gives syndrome $[1, 1, 0]$.",
+        "b": "Incorrect. Error in $m_2$ gives syndrome $[1, 0, 1]$.",
+        "c": "Correct! When $s_2 = s_3 = 1$ and $s_1 = 0$, the error is in position 3 ($m_3$).",
+        "d": "Incorrect. Error in $m_4$ gives syndrome $[1, 1, 1]$."
+      },
+      "correctAnswer": "c",
+      "difficulty": "intermediate"
+    },
+    {
+      "question": "10. What is the Hamming weight of the codeword $[1, 0, 1, 1, 0, 0, 1]$?",
+      "answers": {
+        "a": "3",
+        "b": "4",
+        "c": "5",
+        "d": "7"
+      },
+      "explanations": {
+        "a": "Incorrect. Count the number of 1's in the vector.",
+        "b": "Correct! The Hamming weight is the number of 1's, which is 4.",
+        "c": "Incorrect. Count the 1's again.",
+        "d": "Incorrect. The weight cannot equal the length unless all bits are 1."
+      },
+      "correctAnswer": "b",
+      "difficulty": "intermediate"
+    },
+    {
+      "question": "11. For the message $[m_1, m_2, m_3, m_4] = [0, 1, 1, 0]$, compute the complete codeword for the $(7,4)$ Hamming code.",
+      "answers": {
+        "a": "$[0, 1, 1, 0, 1, 1, 0]$",
+        "b": "$[0, 1, 1, 0, 0, 1, 1]$",
+        "c": "$[0, 1, 1, 0, 1, 0, 1]$",
+        "d": "$[0, 1, 1, 0, 0, 0, 0]$"
+      },
+      "explanations": {
+        "a": "Correct! Using $p_5 = m_1+m_2+m_4 = 0+1+0 = 1$, $p_6 = m_1+m_3+m_4 = 0+1+0 = 1$, $p_7 = m_2+m_3+m_4 = 1+1+0 = 0$.",
+        "b": "Incorrect. Check the parity calculations.",
+        "c": "Incorrect. Check the parity calculations.",
+        "d": "Incorrect. Parity bits cannot all be zero for this message."
+      },
+      "correctAnswer": "a",
+      "difficulty": "intermediate"
+    },
+    {
+      "question": "12. What is the sphere-packing (Hamming) bound for the $(7,4,3)$ Hamming code? Does it achieve this bound?",
+      "answers": {
+        "a": "The bound is satisfied but not achieved",
+        "b": "The bound is not satisfied",
+        "c": "The code is perfect and achieves the bound",
+        "d": "Cannot be determined"
+      },
+      "explanations": {
+        "a": "Incorrect. Hamming codes are perfect codes.",
+        "b": "Incorrect. Hamming codes satisfy the sphere-packing bound.",
+        "c": "Correct! Hamming codes are perfect codes: $2^4(1+7) = 16 \\times 8 = 128 = 2^7$.",
+        "d": "Incorrect. The bound can be checked."
+      },
+      "correctAnswer": "c",
+      "difficulty": "advanced"
+    },
+    {
+      "question": "13. In the $(7,4)$ Hamming code, how many codewords have Hamming weight exactly 3?",
+      "answers": {
+        "a": "4",
+        "b": "7",
+        "c": "8",
+        "d": "Cannot be determined without enumeration"
+      },
+      "explanations": {
+        "a": "Incorrect. More codewords have weight 3.",
+        "b": "Correct! There are exactly 7 codewords of weight 3 in the $(7,4,3)$ Hamming code.",
+        "b": "Incorrect. The count is 7, not 8.",
+        "d": "Incorrect. The weight distribution of Hamming codes is known."
+      },
+      "correctAnswer": "b",
+      "difficulty": "advanced"
+    },
+    {
+      "question": "14. For a $(2^r-1, 2^r-r-1)$ Hamming code, what is the relationship between the number of syndrome bits and correctable error patterns?",
+      "answers": {
+        "a": "There are $2^r$ syndrome bits for $2^r-1$ error patterns",
+        "b": "There are $r$ syndrome bits for $2^r-1$ error patterns plus the no-error case",
+        "c": "Each syndrome uniquely identifies one single-bit error position",
+        "d": "Both (b) and (c)"
+      },
+      "explanations": {
+        "a": "Incorrect. There are $r$ syndrome bits, not $2^r$.",
+        "b": "Incorrect. This is only part of the answer.",
+        "c": "Incorrect. This is only part of the answer.",
+        "d": "Correct! With $r$ syndrome bits, we get $2^r$ syndromes: one for no error and $2^r-1 = n$ for each bit position."
+      },
+      "correctAnswer": "d",
+      "difficulty": "advanced"
+    },
+    {
+      "question": "15. If we puncture the $(7,4)$ Hamming code by removing the last parity bit $p_7$, what are the parameters of the resulting code?",
+      "answers": {
+        "a": "$(6, 4, 2)$",
+        "b": "$(6, 4, 3)$",
+        "c": "$(6, 3, 3)$",
+        "d": "$(6, 4, 1)$"
+      },
+      "explanations": {
+        "a": "Correct! Puncturing reduces length to 6 and minimum distance to 2.",
+        "b": "Incorrect. The minimum distance decreases when puncturing.",
+        "c": "Incorrect. The dimension remains 4.",
+        "d": "Incorrect. The minimum distance is at least 2."
+      },
+      "correctAnswer": "a",
+      "difficulty": "advanced"
     }
   ]
 }

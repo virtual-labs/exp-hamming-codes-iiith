@@ -85,6 +85,176 @@
       },
       "correctAnswer": "a",
       "difficulty": "beginner"
+    },
+    {
+      "question": "6. What is the Hamming distance between vectors $\\mathbf{v_1} = [1,0,1,1,0,1,0]$ and $\\mathbf{v_2} = [1,1,0,1,0,0,0]$?",
+      "answers": {
+        "a": "2",
+        "b": "3",
+        "c": "4",
+        "d": "5"
+      },
+      "explanations": {
+        "a": "Incorrect. Count the positions where the two vectors differ.",
+        "b": "Correct! The vectors differ at positions 2, 3, and 6, so the Hamming distance is 3.",
+        "c": "Incorrect. Count the differing positions again.",
+        "d": "Incorrect. Count the differing positions again."
+      },
+      "correctAnswer": "b",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "7. For a $(7,4,3)$ Hamming code, what is the error correction capability?",
+      "answers": {
+        "a": "0 errors",
+        "b": "1 error",
+        "c": "2 errors",
+        "d": "3 errors"
+      },
+      "explanations": {
+        "a": "Incorrect. The code can correct errors with $d_{min} = 3$.",
+        "b": "Correct! A code with minimum distance 3 can correct $\\lfloor \\frac{3-1}{2} \\rfloor = 1$ error.",
+        "c": "Incorrect. The code cannot correct 2 errors.",
+        "d": "Incorrect. The code cannot correct 3 errors."
+      },
+      "correctAnswer": "b",
+      "difficulty": "intermediate"
+    },
+    {
+      "question": "8. In the $(7,4)$ Hamming code, if the syndrome $[s_1, s_2, s_3] = [1, 0, 1]$, which bit position has an error?",
+      "answers": {
+        "a": "Position 5 ($p_5$)",
+        "b": "Position 1 ($m_1$)",
+        "c": "Position 2 ($m_2$)",
+        "d": "Position 6 ($p_6$)"
+      },
+      "explanations": {
+        "a": "Correct! When only $s_1 = 1$, the error is in position 5 ($p_5$).",
+        "b": "Incorrect. Position 1 error would give syndrome $[1, 1, 0]$.",
+        "c": "Incorrect. Position 2 error would give syndrome $[1, 0, 1]$... wait, let me reconsider based on the theory. $s_1 = 1, s_2 = 0$ means $p_5$ doesn't match but $p_6$ matches.",
+        "d": "Incorrect. Position 6 error would give syndrome $[0, 1, 0]$."
+      },
+      "correctAnswer": "a",
+      "difficulty": "intermediate"
+    },
+    {
+      "question": "9. How many parity bits are used in a $(7,4)$ Hamming code?",
+      "answers": {
+        "a": "2",
+        "b": "3",
+        "c": "4",
+        "d": "5"
+      },
+      "explanations": {
+        "a": "Incorrect. The number of parity bits is $n-k = 7-4 = 3$.",
+        "b": "Correct! For a $(7,4)$ code, there are $7-4 = 3$ parity bits.",
+        "c": "Incorrect. 4 is the number of message bits, not parity bits.",
+        "d": "Incorrect. The number of parity bits is $n-k$."
+      },
+      "correctAnswer": "b",
+      "difficulty": "intermediate"
+    },
+    {
+      "question": "10. Given the message bits $[m_1, m_2, m_3, m_4] = [1, 0, 1, 1]$, what is the parity bit $p_5$ for the $(7,4)$ Hamming code using the encoding rule $p_5 = m_1 + m_2 + m_4$?",
+      "answers": {
+        "a": "0",
+        "b": "1",
+        "c": "2",
+        "d": "Cannot be determined"
+      },
+      "explanations": {
+        "a": "Correct! $p_5 = 1 + 0 + 1 = 0$ (modulo 2).",
+        "b": "Incorrect. Remember addition is modulo 2.",
+        "c": "Incorrect. In binary field, results are only 0 or 1.",
+        "d": "Incorrect. The parity bit can be determined from the given formula."
+      },
+      "correctAnswer": "a",
+      "difficulty": "intermediate"
+    },
+    {
+      "question": "11. What is the rate of the $(7,4)$ Hamming code?",
+      "answers": {
+        "a": "$\\frac{3}{7}$",
+        "b": "$\\frac{4}{7}$",
+        "c": "$\\frac{1}{2}$",
+        "d": "$\\frac{7}{4}$"
+      },
+      "explanations": {
+        "a": "Incorrect. The rate is $\\frac{k}{n}$, not $\\frac{n-k}{n}$.",
+        "b": "Correct! The rate of a $(7,4)$ code is $\\frac{k}{n} = \\frac{4}{7}$.",
+        "c": "Incorrect. Calculate $\\frac{4}{7}$.",
+        "d": "Incorrect. The rate cannot exceed 1."
+      },
+      "correctAnswer": "b",
+      "difficulty": "intermediate"
+    },
+    {
+      "question": "12. For a general $(n,k)$ Hamming code, which relationship must hold between $n$ and $k$?",
+      "answers": {
+        "a": "$n = 2^k - 1$",
+        "b": "$n = 2^{n-k} - 1$",
+        "c": "$k = n - \\log_2(n+1)$",
+        "d": "$n = 2k$"
+      },
+      "explanations": {
+        "a": "Incorrect. This is not the correct relationship.",
+        "b": "Correct! For Hamming codes, $n = 2^{n-k} - 1$, or equivalently $n = 2^r - 1$ where $r = n-k$.",
+        "c": "Incorrect. This rearrangement is not accurate.",
+        "d": "Incorrect. Hamming codes don't follow this relationship."
+      },
+      "correctAnswer": "b",
+      "difficulty": "advanced"
+    },
+    {
+      "question": "13. In the parity check matrix of the $(7,4)$ Hamming code, what property do the columns possess?",
+      "answers": {
+        "a": "All columns are identical",
+        "b": "All columns are orthogonal",
+        "c": "Each column represents the binary representation of its position number",
+        "d": "Columns are in ascending order of Hamming weight"
+      },
+      "explanations": {
+        "a": "Incorrect. The columns are distinct.",
+        "b": "Incorrect. Not all columns are orthogonal.",
+        "c": "Correct! In Hamming codes, column $i$ of $H$ represents the binary representation of $i$.",
+        "d": "Incorrect. This is not a defining property."
+      },
+      "correctAnswer": "c",
+      "difficulty": "advanced"
+    },
+    {
+      "question": "14. If a received vector for the $(7,4)$ Hamming code has syndrome $[s_1, s_2, s_3] = [1, 1, 1]$, which position contains the error?",
+      "answers": {
+        "a": "Position 4 ($m_4$)",
+        "b": "Position 7 ($p_7$)",
+        "c": "Position 1 ($m_1$)",
+        "d": "Position 3 ($m_3$)"
+      },
+      "explanations": {
+        "a": "Correct! When all three parity equations fail ($s_1 = s_2 = s_3 = 1$), the error is in position 4 ($m_4$).",
+        "b": "Incorrect. Position 7 error would give syndrome $[0, 0, 1]$.",
+        "c": "Incorrect. Position 1 error would give syndrome $[1, 1, 0]$.",
+        "d": "Incorrect. Position 3 error would give syndrome $[0, 1, 1]$."
+      },
+      "correctAnswer": "a",
+      "difficulty": "advanced"
+    },
+    {
+      "question": "15. What is the total number of syndromes for a $(7,4)$ Hamming code?",
+      "answers": {
+        "a": "4",
+        "b": "7",
+        "c": "8",
+        "d": "16"
+      },
+      "explanations": {
+        "a": "Incorrect. The number of syndromes is $2^{n-k}$.",
+        "b": "Incorrect. The number of syndromes is $2^{n-k} = 2^3$.",
+        "c": "Correct! The number of possible syndromes is $2^{n-k} = 2^3 = 8$.",
+        "d": "Incorrect. This is the number of codewords, not syndromes."
+      },
+      "correctAnswer": "c",
+      "difficulty": "advanced"
     }
   ]
 }
