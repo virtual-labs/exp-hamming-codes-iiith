@@ -2,37 +2,88 @@
   "version": 2.0,
   "questions": [
     {
-      "question": "This is a Sample Question 1?",
+      "question": "1. What is the rank of the parity check matrix of a $\\mathbf{(8,5)}$ linear code?",
       "answers": {
-        "a": "answer1",
-        "b": "answer2",
-        "c": "answer3",
-        "d": "answer4"
+        "a": "4",
+        "b": "5",
+        "c": "3",
+        "d": "7"
       },
       "explanations": {
-        "a": "Explanation 1  <a href='www.google.com'>here</a>",
-        "b": "Explanation 2",
-        "c": "Explanation 2",
-        "d": "Explanation 2"
+        "a": "Incorrect. The rank of the parity check matrix is $n-k = 3$.",
+        "b": "Incorrect. The rank is not equal to the dimension $k$.",
+        "c": "Correct! For an $(8,5)$ code, the parity check matrix has rank $8-5=3$.",
+        "d": "Incorrect. The rank cannot be greater than $n$."
+      },
+      "correctAnswer": "c",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "2. For an $\\mathbf{(n,k)}$ code with minimum distance $\\mathbf{d}$, what is the maximum number of errors which can be detected?",
+      "answers": {
+        "a": "$d$",
+        "b": "$d-1$",
+        "c": "$\\frac{d}{2}$",
+        "d": "$\\frac{d-1}{2}$"
+      },
+      "explanations": {
+        "a": "Incorrect. The code can detect up to $d-1$ errors.",
+        "b": "Correct! A code with minimum distance $d$ can detect up to $d-1$ errors.",
+        "c": "Incorrect. This is the maximum number of errors that can be corrected, not detected.",
+        "d": "Incorrect. This is related to error correction, not detection."
+      },
+      "correctAnswer": "b",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "3. Consider the generator matrix of an $\\mathbf{(n,k)}$ code over $\\mathbb{F}_2$ in systematic form given by $\\begin{bmatrix} \\underbrace{I}_{k \\times k} | \\underbrace{P}_{k \\times (n-k)} \\end{bmatrix}$, then what is the partiy check matrix of this code?",
+      "answers": {
+        "a": "$\\begin{bmatrix} \\underbrace{I}_{k \\times k} | \\underbrace{P}_{k \\times (n-k)} \\end{bmatrix}$",
+        "b": "$\\begin{bmatrix} \\underbrace{P}_{k \\times (n-k)} | \\underbrace{I}_{k \\times k} \\end{bmatrix}$",
+        "c": "$\\begin{bmatrix} \\underbrace{P^t}_{(n-k) \\times k} | \\underbrace{I}_{(n-k) \\times (n-k)} \\end{bmatrix}$",
+        "d": "$\\begin{bmatrix} \\underbrace{I}_{(n-k) \\times (n-k)} | \\underbrace{P^t}_{(n-k) \\times k} \\end{bmatrix}$"
+      },
+      "explanations": {
+        "a": "Incorrect. This is the generator matrix, not the parity check matrix.",
+        "b": "Incorrect. The dimensions do not match for a parity check matrix.",
+        "c": "Correct! The parity check matrix in systematic form is $[P^t | I]$.",
+        "d": "Incorrect. The order of blocks is reversed."
+      },
+      "correctAnswer": "c",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "4. Let $\\mathbf{w_{\\min}}$ denote the minimum Hamming weight of a non-zero codeword in a linear block code $\\mathcal{C}$ and let $\\mathbf{d_{\\min}}$ denote the minimum distance of the code. Which of the following is true?",
+      "answers": {
+        "a": "$w_{\\min} = d_{\\min}$",
+        "b": "$w_{\\min} > d_{\\min}$",
+        "c": "$w_{\\min} < d_{\\min}$",
+        "d": "Varies based on code"
+      },
+      "explanations": {
+        "a": "Correct! For linear codes, minimum distance equals minimum weight of a non-zero codeword.",
+        "b": "Incorrect. They are always equal for linear codes.",
+        "c": "Incorrect. They are always equal for linear codes.",
+        "d": "Incorrect. This is only true for non-linear codes."
       },
       "correctAnswer": "a",
       "difficulty": "beginner"
     },
     {
-      "question": "This is a Sample Question 2?",
+      "question": "5. What is the minimum distance of a single parity check code with block length 7 and dimension 6?",
       "answers": {
-        "a": "answer1",
-        "b": "answer2",
-        "c": "answer3",
-        "d": "answer4"
+        "a": "2",
+        "b": "3",
+        "c": "6",
+        "d": "7"
       },
       "explanations": {
-        "a": "Explanation 1  <a href='www.google.com'>here</a>",
-        "b": "Explanation 2",
-        "c": "Explanation 2",
-        "d": "Explanation 2"
+        "a": "Correct! Single parity check codes always have minimum distance 2.",
+        "b": "Incorrect. Minimum distance is not 3 for SPC codes.",
+        "c": "Incorrect. Minimum distance is not equal to the dimension.",
+        "d": "Incorrect. Minimum distance cannot be equal to the block length for SPC codes."
       },
-      "correctAnswer": "c",
+      "correctAnswer": "a",
       "difficulty": "beginner"
     }
   ]
